@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Sorry We Missed You",
+    "rate": 7.5,
+    "email": "johndoe@abc.com",
+    "gender": "Male",
+    "status": "Terminated"
+  },
+  {
+    "id": 2,
+    "name": "Emma",
+    "rate": 5.2,
+    "email": "janedoe@abc.com",
+    "gender": "Female",
+    "status": "New"
+  },
+  {
+    "id": 3,
+    "name": "The Invisible Man",
+    "rate": 10,
+    "email": "alicedoe@abc.com",
+    "gender": "Female",
+    "status": "Leaving"
+  },
+  {
+    "id": 4,
+    "name": "The Way Back",
+    "rate": 6.8,
+    "email": "bobdoe@abc.com",
+    "gender": "Male",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "name": "Beanpole",
+    "rate": 9.1,
+    "email": "johndoe@abc.com",
+    "gender": "Male",
+    "status": "Terminated"
+  },
+  {
+    "id": 6,
+    "name": "Crip Camp",
+    "rate": 8.4,
+    "email": "janedoe@abc.com",
+    "gender": "Female",
+    "status": "New"
+  },
+  {
+    "id": 7,
+    "name": "Never Rarely Sometimes Always",
+    "rate": 7,
+    "email": "alicedoe@abc.com",
+    "gender": "Female",
+    "status": "Leaving"
+  },
+  {
+    "id": 8,
+    "name": "Bacurau",
+    "rate": 6.2,
+    "email": "bobdoe@abc.com",
+    "gender": "Male",
+    "status": "Active"
+  }
+]
