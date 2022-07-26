@@ -9,45 +9,45 @@ export default class SearchPannel extends Component {
     this.state = {
       keyword: "",
       overSeven: false,
-      movies: MOVIES,
     };
   }
 
   handleKeywordChange = (e) => {
-    const filteredItems = this.state.movies.filter((item) => {
-      return item.name.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    this.setState({ keyword: e.target.value, movies: filteredItems });
+    this.setState({ keyword: e.target.value });
   };
 
   handleOverSevenChange = (e) => {
     this.setState({ overSeven: e.target.checked });
   };
 
+  filteredItems(keyword, overSeven) {
+    return MOVIES.filter((item) => {
+      if (overSeven) {
+        if (item.rate > 7) {
+          return item.name.toLowerCase().includes(keyword.toLowerCase());
+        } else {
+          return false;
+        }
+      } else {
+        return item.name.toLowerCase().includes(keyword.toLowerCase());
+      }
+    });
+  }
+
   render() {
-    const { keyword, overSeven, movies } = this.state;
-    const arr = movies.map((item) => ({
-      text: item.name,
-      id: item.rate,
-    }));
+    const { keyword, overSeven } = this.state;
+    const arr = this.filteredItems(keyword, overSeven).map((item) => ({ text: item.name, id: item.id }));
 
     return (
       <div>
+        <h1>Filterable List</h1>
         <div>
           <div>Keyword</div>
-          <input
-            type="text"
-            value={keyword}
-            onChange={this.handleKeywordChange}
-          />
+          <input type="text" value={keyword} onChange={this.handleKeywordChange} />
         </div>
         <div>
-          Only over 7.0
-          <input
-            type="checkbox"
-            checked={overSeven}
-            onChange={this.handleOverSevenChange}
-          />
+          <span>Only over 7.0</span>
+          <input type="checkbox" checked={overSeven} onChange={this.handleOverSevenChange} />
         </div>
         <List items={arr} />
       </div>
