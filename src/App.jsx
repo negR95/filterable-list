@@ -1,8 +1,8 @@
 import "./App.css";
-import SearchPannel from "./Components/FilterableList/SearchPannel";
+import ManageList from "./Components/FilterableList/ManageList";
 
 function App() {
-  return <SearchPannel />;
+  return <ManageList />;
 }
 
 export default App;

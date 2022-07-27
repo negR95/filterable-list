@@ -1,3 +1,3 @@
 export default function ListItem({ text }) {
-  return <li>{text}</li>;
+  return <li className="list-group-item">{text}</li>;
 }
